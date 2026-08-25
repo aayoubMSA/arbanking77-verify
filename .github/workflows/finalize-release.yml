@@ -17,19 +17,27 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Diagnose fragment 2 integrity
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          s = Path('.staging/release.zip.b64.2').read_text(encoding='utf-8')
+          print('FRAG2_LEN', len(s))
+          for i in range(0, len(s), 256):
+              block = s[i:i+256].encode('ascii')
+              print('FRAG2_BLOCK', i, hashlib.sha256(block).hexdigest())
+          PY
+
       - name: Reconstruct and verify approved release ZIP
         shell: bash
         run: |
           set -euo pipefail
-          : > /tmp/ArBanking77-Verify-v0.1.0.zip
-          for part in \
-            .staging/release.zip.b64.1 \
-            .staging/release.zip.b64.2 \
-            .staging/release.zip.b64.3 \
-            .staging/release.zip.b64.4
-          do
-            base64 --decode "$part" >> /tmp/ArBanking77-Verify-v0.1.0.zip
-          done
+          cat .staging/release.zip.b64.1 \
+              .staging/release.zip.b64.2 \
+              .staging/release.zip.b64.3 \
+              .staging/release.zip.b64.4 | base64 --decode > /tmp/ArBanking77-Verify-v0.1.0.zip
           echo '5c097a9ef3b809a762da856cc69d727af6eb10aa0dbd2c8671440596f6991534  /tmp/ArBanking77-Verify-v0.1.0.zip' | sha256sum -c -
           rm -rf /tmp/arbanking77-release
           mkdir -p /tmp/arbanking77-release
