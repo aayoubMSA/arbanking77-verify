@@ -17,17 +17,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Diagnose fragment 2 bad block
+      - name: Repair and verify exact fragment 2
         shell: bash
         run: |
+          set -euo pipefail
           python - <<'PY'
           from pathlib import Path
           import hashlib
           s = Path('.staging/release.zip.b64.2').read_text(encoding='utf-8')
-          print('FRAG2_LEN', len(s))
-          for i in range(3072, 3328, 32):
-              block = s[i:i+32].encode('ascii')
-              print('FRAG2_SUBBLOCK', i, hashlib.sha256(block).hexdigest())
+          assert len(s) == 6500, len(s)
+          s = s[:3232] + 'sZfxKRSeRiMVBUEhyq3RoadGNDLKcpBW' + s[3264:]
+          digest = hashlib.sha256(s.encode('ascii')).hexdigest()
+          print('CORRECTED_FRAG2_SHA256', digest)
+          assert digest == 'e19486a3fb3c4715bdee65bc5ea34d4ea7c521812fd3b20cde774deba81ece5c'
+          Path('/tmp/release.zip.b64.2').write_text(s, encoding='ascii')
           PY
 
       - name: Reconstruct and verify approved release ZIP
@@ -35,7 +38,7 @@ jobs:
         run: |
           set -euo pipefail
           cat .staging/release.zip.b64.1 \
-              .staging/release.zip.b64.2 \
+              /tmp/release.zip.b64.2 \
               .staging/release.zip.b64.3 \
               .staging/release.zip.b64.4 | base64 --decode > /tmp/ArBanking77-Verify-v0.1.0.zip
           echo '5c097a9ef3b809a762da856cc69d727af6eb10aa0dbd2c8671440596f6991534  /tmp/ArBanking77-Verify-v0.1.0.zip' | sha256sum -c -
