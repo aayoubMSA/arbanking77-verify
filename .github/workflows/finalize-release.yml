@@ -3,8 +3,7 @@ name: Finalize exact ArBanking77-Verify release tree
 on:
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/finalize-release.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -45,7 +44,7 @@ jobs:
           sha256sum -c MANIFEST.sha256
           python -m unittest -v tests/test_arbanking77_verify.py
 
-      - name: Commit exact approved public payload
+      - name: Commit exact approved payload
         shell: bash
         run: |
           set -euo pipefail
