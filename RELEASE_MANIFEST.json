@@ -1,0 +1,67 @@
+{
+  "file_count_before_manifests": 12,
+  "files": [
+    {
+      "bytes": 1080,
+      "path": ".zenodo.json",
+      "sha256": "46ec8bf9a519d0e53af522eb9314d2ec7f321f1ede2c3fb9808d39b8b9f342fc"
+    },
+    {
+      "bytes": 753,
+      "path": "CITATION.cff",
+      "sha256": "9fc0f263ab3f79f41157ba0e75fb34ad83934bc878f8eb9622b223c5e3864b2f"
+    },
+    {
+      "bytes": 1068,
+      "path": "LICENSE",
+      "sha256": "bd0038c3a9737c1859fec2d4af3114fa6dab84d7fe985e4ad83acbcd69ea8b90"
+    },
+    {
+      "bytes": 4734,
+      "path": "README.md",
+      "sha256": "17f95feba5ce611d42c12d2e233213820536969906f33efa04b1b3fa6500aa5d"
+    },
+    {
+      "bytes": 2156,
+      "path": "RELEASE_NOTES.md",
+      "sha256": "75f42faa857b24474ae9d3e4f8e3cf8ec517bf2d1ee14dad7995c80b538d4069"
+    },
+    {
+      "bytes": 254,
+      "path": "SOURCE_PROVENANCE.json",
+      "sha256": "8ae5576c485d2a15ce6e8d5466a696b83abfa0c8a8bab5c906499a564ccf02bf"
+    },
+    {
+      "bytes": 2971,
+      "path": "TOOL_POSITIONING.md",
+      "sha256": "c3bcc856ddfb7e77a49e047d8521f44ace1bbcc5f5f88c91c49ab1f76bc76086"
+    },
+    {
+      "bytes": 17419,
+      "path": "arbanking77_verify.py",
+      "sha256": "16a9172ba1cd755762172ee78268de704a4eed2cf3a43640f076fd63b42f1325"
+    },
+    {
+      "bytes": 2589,
+      "path": "profile.schema.json",
+      "sha256": "f52ed8d496f4074cafe81da341b06df28c2ca3b09652d5394e54e9f8cdf00041"
+    },
+    {
+      "bytes": 949,
+      "path": "profiles/ARB77-AraFinNLP2024-participant-input.json",
+      "sha256": "d8303984abe68d19898ea6fcadac1f3ee40131150df804dd91c7860d8a2d3ed1"
+    },
+    {
+      "bytes": 1997,
+      "path": "profiles/ARB77-current-public-2026.json",
+      "sha256": "6e647e829f5217869593bb3dc6934d51b5b5dfa20c2b847e41bafbbcbbf2d467"
+    },
+    {
+      "bytes": 2834,
+      "path": "tests/test_arbanking77_verify.py",
+      "sha256": "153f0727b6332fd8ea734e1ad1d21bf43f803994a6a696fab503bf43f30cc856"
+    }
+  ],
+  "package": "ArBanking77-Verify",
+  "version": "0.1.0"
+}

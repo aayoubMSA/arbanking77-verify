@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "ARB77-AraFinNLP2024-participant-input",
+  "benchmark": "ArBanking77",
+  "state_role": "historical_participant_input",
+  "record_scope": "Four-dialect blind participant input distributed for AraFinNLP 2024 Subtask 1.",
+  "notes": "The archive is pinned by SHA-256 and Git blob SHA-1; the embedded blind test CSV is independently pinned by SHA-256.",
+  "records": {
+    "text_column": "Query",
+    "expected_rows": 11721
+  },
+  "sources": [
+    {
+      "source_id": "participant-archive",
+      "url": "https://raw.githubusercontent.com/Fired-from-NLP/ArabicNLP2024-subtask1/main/ArabicNLP.zip",
+      "member": "ArabicNLP/test/subtask1-test-set.csv",
+      "sha256": "999f1cd4b5cbfb99e52a2acf6c1e75be568c31e7fa92e66a19fa2df0c2c0dd6e",
+      "git_blob_sha1": "5887c0ae20ccc2ace20ecb350aba935f9886ffcc",
+      "member_sha256": "61f595bbc850a318a600179c3fe092af6fa000ec33e999c15511305d66320047"
+    }
+  ]
+}

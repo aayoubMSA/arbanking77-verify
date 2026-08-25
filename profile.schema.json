@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:arbanking77-verify:profile-schema:1.0",
+  "title": "Benchmark State Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_id",
+    "benchmark",
+    "state_role",
+    "records",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_commit": {
+      "type": "string"
+    },
+    "record_scope": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "records": {
+      "type": "object",
+      "required": [
+        "text_column"
+      ],
+      "properties": {
+        "text_column": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_rows": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "member": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "git_blob_sha1": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "member_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "dialect": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "oneOf": [
+          {
+            "required": [
+              "url"
+            ],
+            "not": {
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "required": [
+              "path"
+            ],
+            "not": {
+              "required": [
+                "url"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "ARB77-current-public-2026",
+  "benchmark": "ArBanking77",
+  "state_role": "current_public_four_dialect_union",
+  "source_commit": "2e3a5639e254bc28828ed0af6d3059d64d3b97fc",
+  "record_scope": "Union of Palestinian, Saudi, Moroccan, and Tunisian public test files; MSA excluded to match the four-dialect historical participant-input scope.",
+  "records": {
+    "text_column": "text",
+    "expected_rows": 11960
+  },
+  "sources": [
+    {
+      "source_id": "palestinian-test",
+      "dialect": "Palestinian",
+      "url": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_Arabized_PAL_test.csv",
+      "sha256": "6d80436bf89c8257894baa178a34f090c01975671d33dfd83da5eb2501341a43",
+      "git_blob_sha1": "7aad55f46a9387d339e3b41f349b6daa4409fb37"
+    },
+    {
+      "source_id": "saudi-test",
+      "dialect": "Saudi",
+      "url": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_Arabized_Saudi_test.csv",
+      "sha256": "9c01583810f37152a734197c3bf80b6cf9c6d129be25c9e1eac27bc0cd91af74",
+      "git_blob_sha1": "58526b7e8e6b33a1d9afb933ef993963fc0c4b4a"
+    },
+    {
+      "source_id": "moroccan-test",
+      "dialect": "Moroccan",
+      "url": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_Arabized_Moroccan_test.csv",
+      "sha256": "1c4063a2af8bc415a31d6ec53b18e23080fdd4814f10467f6b1819d827fa8de8",
+      "git_blob_sha1": "e8d5c760e24eccac27cc230dcf6ac3d234c99618"
+    },
+    {
+      "source_id": "tunisian-test",
+      "dialect": "Tunisian",
+      "url": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_Arabized_Tunisian_test.csv",
+      "sha256": "1c7c7aded5b5a90e20608a2dd2f3435683f6090d722e284e6e466eee402ef7a0",
+      "git_blob_sha1": "719cdf36cbd1ba489936af5339bd22591b2f14d1"
+    }
+  ]
+}

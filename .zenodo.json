@@ -1,0 +1,23 @@
+{
+  "title": "ArBanking77-Verify v0.1.0",
+  "upload_type": "software",
+  "description": "A compact reference implementation for benchmark-state identity and historical compatibility verification. The software binds declared states to immutable source identifiers, fails closed on identity or structural mismatches, performs multiplicity-preserving record comparison under a declared normalization ladder, and emits machine-readable evidence. No benchmark dataset bytes are redistributed in the software release.",
+  "creators": [
+    {
+      "name": "Ayoub, Ahmed",
+      "orcid": "0009-0004-7895-3191",
+      "affiliation": "October University for Modern Sciences and Arts (MSA University)"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "benchmark identity",
+    "data provenance",
+    "dataset versioning",
+    "reproducibility",
+    "compatibility verification",
+    "ArBanking77"
+  ],
+  "notes": "Prepared as archival metadata. The DOI field is intentionally absent because no Zenodo record has been published at the release-candidate stage."
+}

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use ArBanking77-Verify, please cite the associated software release and manuscript."
+title: "ArBanking77-Verify"
+type: software
+authors:
+  - family-names: "Ayoub"
+    given-names: "Ahmed"
+    orcid: "https://orcid.org/0009-0004-7895-3191"
+    affiliation: "October University for Modern Sciences and Arts (MSA University)"
+version: "0.1.0"
+license: MIT
+keywords:
+  - benchmark identity
+  - data provenance
+  - dataset versioning
+  - reproducibility
+  - compatibility verification
+abstract: >-
+  ArBanking77-Verify is a compact reference implementation for binding declared
+  benchmark states to immutable source identities and testing record-level
+  historical compatibility using multiplicity-preserving comparison.
