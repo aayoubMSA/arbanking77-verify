@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Diagnose fragment 2 integrity
+      - name: Diagnose fragment 2 bad block
         shell: bash
         run: |
           python - <<'PY'
@@ -25,9 +25,9 @@ jobs:
           import hashlib
           s = Path('.staging/release.zip.b64.2').read_text(encoding='utf-8')
           print('FRAG2_LEN', len(s))
-          for i in range(0, len(s), 256):
-              block = s[i:i+256].encode('ascii')
-              print('FRAG2_BLOCK', i, hashlib.sha256(block).hexdigest())
+          for i in range(3072, 3328, 32):
+              block = s[i:i+32].encode('ascii')
+              print('FRAG2_SUBBLOCK', i, hashlib.sha256(block).hexdigest())
           PY
 
       - name: Reconstruct and verify approved release ZIP
