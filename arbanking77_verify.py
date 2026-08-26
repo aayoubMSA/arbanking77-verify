@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ArBanking77-Verify v0.1
+ArBanking77-Verify v0.1.1
 
 Reference implementation of a generic benchmark-state compatibility check.
 It verifies immutable source identities, materializes tabular records from
@@ -26,7 +26,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-TOOL_VERSION = "0.1.0"
+TOOL_VERSION = "0.1.1"
 PROFILE_SCHEMA_VERSION = "1.0"
 
 AR_DIAC = re.compile(r"[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]")
