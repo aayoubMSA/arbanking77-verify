@@ -1,7 +1,7 @@
 {
   "build_policy": "whitelist-only; no dataset bytes redistributed",
   "package": "ArBanking77-Verify",
-  "source_commit": "324bb499f93b932586bd43eff29d19c0277f4078",
-  "source_subdirectory": "reproducibility/arbanking77_verify",
-  "version": "0.1.0"
+  "public_repository": "https://github.com/aayoubMSA/arbanking77-verify",
+  "release_lineage": "v0.1.1 is a publication-hygiene update of v0.1.0; verifier logic and frozen comparison observables are unchanged.",
+  "version": "0.1.1"
 }
