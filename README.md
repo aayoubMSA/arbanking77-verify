@@ -137,14 +137,21 @@ translation because files are hashed before text decoding.
 python -m unittest -v tests/test_arbanking77_verify.py
 ```
 
-The release-candidate CI additionally builds a standalone whitelist package,
-runs its unit tests from that package, performs the full network-backed
-historical/current comparison, checks the frozen manuscript-level totals, and
-verifies deterministic packaging.
+The release workflow builds a standalone whitelist package, runs its unit tests
+from that package, performs the full network-backed historical/current
+comparison, checks the frozen manuscript-level totals, and verifies deterministic
+packaging.
 
 ## Release status
 
-Version `0.1.0` is an archival **release candidate**. The source and packaging
-have been prepared for a public software/DOI release, but no public repository,
-Zenodo DOI, Software Heritage archival request, or external disclosure is claimed
-until the explicit release gate is approved.
+Version `0.1.0` is a published archival software release.
+
+- GitHub release: `https://github.com/aayoubMSA/arbanking77-verify/releases/tag/v0.1.0`
+- Zenodo version DOI: `https://doi.org/10.5281/zenodo.22103290`
+- release asset: `ArBanking77-Verify-v0.1.0.zip`
+- release asset SHA-256: `5c097a9ef3b809a762da856cc69d727af6eb10aa0dbd2c8671440596f6991534`
+
+The published `v0.1.0` tag and release asset remain the frozen archival artifact.
+This `main`-branch README records the current public release/DOI status without
+changing that tagged artifact. No Software Heritage archival claim or responsible
+disclosure action is made here.
