@@ -7,7 +7,7 @@ authors:
     given-names: "Ahmed"
     orcid: "https://orcid.org/0009-0004-7895-3191"
     affiliation: "October University for Modern Sciences and Arts (MSA University)"
-version: "0.1.0"
+version: "0.1.1"
 license: MIT
 keywords:
   - benchmark identity
