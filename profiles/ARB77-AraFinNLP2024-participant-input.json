@@ -3,8 +3,8 @@
   "profile_id": "ARB77-AraFinNLP2024-participant-input",
   "benchmark": "ArBanking77",
   "state_role": "historical_participant_input",
-  "record_scope": "Four-dialect blind participant input distributed for AraFinNLP 2024 Subtask 1.",
-  "notes": "The archive is pinned by SHA-256 and Git blob SHA-1; the embedded blind test CSV is independently pinned by SHA-256.",
+  "record_scope": "Four-dialect blind participant input retained in a contemporaneous AraFinNLP 2024 participant artifact.",
+  "notes": "The participant-retained archive is pinned by SHA-256 and Git blob SHA-1; the embedded blind test CSV is independently pinned by SHA-256. The artifact is not treated as organizer-certified gold, and QueryID is not used as dialect ground truth.",
   "records": {
     "text_column": "Query",
     "expected_rows": 11721
